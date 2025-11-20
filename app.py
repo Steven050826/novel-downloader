@@ -6,6 +6,8 @@ import os
 import json
 
 app = Flask(__name__)
+# 设置JSON不转义非ASCII字符
+app.config['JSON_AS_ASCII'] = False
 CORS(app)  # 允许跨域访问
 api = Api(app)
 
